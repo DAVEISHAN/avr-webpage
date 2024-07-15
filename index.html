@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="CODAMAL: CONTRASTIVE DOMAIN ADAPTATION FOR MALARIA DETECTION IN LOW-COST MICROSCOPES">
-  <title>CodaMal: Contrastive Domain Adaptation for Malaria Detection in Low-Cost Microscopes</title>
+        content="Sync from the Sea: Retrieving Alignable Videos from Large-Scale Datasets">
+  <title>Sync from the Sea: Retrieving Alignable Videos from Large-Scale Datasets</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -51,17 +51,17 @@
             <span class="author-block">
               <a href="https://daveishan.github.io/">Ishan Dave</a>,</span>
             <span class="author-block">
-              <a href="https://github.com/tristandb8">Tristan de Blegiers</a>,</span>
-            <span class="author-block">
-              <a href="https://www.crcv.ucf.edu/chenchen/">Chen Chen</a>,</span>
-            </span>
+              <a href="https://fabiancaba.com/">Fabian Caba</a>,</span>
             <span class="author-block">
               <a href="https://www.crcv.ucf.edu/person/mubarak-shah/">Mubarak Shah</a>
+            </span>
+            <span class="author-block">
+              <a href="https://sjenni.github.io/">Simon Jenni</a>,</span>
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block">University of Central Florida</span>
+            <span class="author-block">University of Central Florida, Adobe Research</span>
           </div>
 
           <div class="column has-text-centered">
@@ -116,31 +116,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Malaria is a major health issue worldwide, and its diagnosis
-            requires scalable solutions that can work effectively with low-
-            cost microscopes (LCM). Deep learning-based methods have
-            shown success in computer-aided diagnosis from microscopic
-            images. However, these methods need annotated images that
-            show cells affected by malaria parasites and their life stages.
-            Annotating images from LCM significantly increases the bur-
-            den on medical experts compared to annotating images from
-            high-cost microscopes (HCM). For this reason, a practical so-
-            lution would be trained on HCM images which should gener-
-            alize well on LCM images during testing. While earlier meth-
-            ods adopted a multi-stage learning process, they did not offer
-            an end-to-end approach. In this work, we present an end-to-
-            end learning framework, named CodaMal (COntrastive Do-
-            main Adpation for MALaria). In order to bridge the gap be-
-            tween HCM (training) and LCM (testing), we propose a do-
-            main adaptive contrastive loss. It reduces the domain shift
-            by promoting similarity between the representations of HCM
-            and its corresponding LCM image, without imposing an ad-
-            ditional annotation burden. In addition, the training objective
-            includes standard object detection losses, ensuring the accu-
-            rate detection of malaria parasites. On the publicly available
-            large-scale M5-dataset, our proposed method shows a signifi-
-            cant improvement of 44% over the state-of-the-art methods in
-            terms of the mean average precision metric (mAP).
+            Temporal video alignment aims to synchronize the key events like object interactions or action phase transitions in two videos. Such methods could benefit various video editing, processing, and understanding tasks. However, existing approaches operate under the restrictive assumption that a suitable video pair for alignment is given, significantly limiting their broader applicability. To address this, we re-pose temporal alignment as a search problem and introduce the task of Alignable Video Retrieval (AVR). Given a query video, our approach can identify well-alignable videos from a large collection of clips and temporally synchronize them to the query. To achieve this, we make three key contributions: 1) we introduce DRAQ, a video alignability indicator to identify and re-rank the best alignable video from a set of candidates; 2) we propose an effective and generalizable frame-level video feature design to improve the alignment performance of several off-the-shelf feature representations, and 3) we propose a novel benchmark and evaluation protocol for AVR using cycle-consistency metrics. Our experiments on 3 datasets, including large-scale Kinetics700, demonstrate the effectiveness of our approach in identifying alignable video pairs from diverse datasets.
           </p>
         </div>
       </div>
