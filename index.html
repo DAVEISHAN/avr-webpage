@@ -1,43 +1,42 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta name="description"
-        content="Sync from the Sea: Retrieving Alignable Videos from Large-Scale Datasets">
-  <title>Sync from the Sea: Retrieving Alignable Videos from Large-Scale Datasets</title>
-
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-
-    gtag('js', new Date());
-
-    gtag('config', 'G-PYVRSFMDRL');
-  </script>
-
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-        rel="stylesheet">
-
-  <link rel="stylesheet" href="./static/css/bulma.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/favicon.svg">
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="./static/js/fontawesome.all.min.js"></script>
-  <script src="./static/js/bulma-carousel.min.js"></script>
-  <script src="./static/js/bulma-slider.min.js"></script>
-  <script src="./static/js/index.js"></script>
-</head>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Sync from the Sea: Retrieving Alignable Videos from Large-Scale Datasets">
+    <title>Sync from the Sea: Retrieving Alignable Videos from Large-Scale Datasets</title>
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-PYVRSFMDRL');
+    </script>
+  
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+    <link rel="icon" href="./static/images/favicon.svg">
+  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <script src="./static/js/index.js"></script>
+    <style>
+      .item video {
+        width: 100%; /* ensures video fills the container width */
+        height: 500px; /* fixed height, change this value as needed */
+      }
+    </style>
+  </head>
 <body>
 
 
@@ -102,20 +101,6 @@
                 </a>
               </span>
               
-              <!-- Code Link. -->
-<!--               <span class="link-block">
-                <a href="https://github.com/DAVEISHAN/CodaMal"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-github"></i>
-                  </span>
-                  <span>Code</span>
-                  </a>
-              </span> -->
-
-              
-              
-              
             </div>
             
 
@@ -129,7 +114,61 @@
   </div>
 </section>
 
+<section class="section">
+  <div class="container is-max-desktop">
+  <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+  <!--       <div class="column is-four-fifths"> -->
+      <!-- <div class="column is-full"> Changed to is-full for full width -->
+      <div class="column is-four-fifths">
 
+       <h3 class="title is-3">TL;DR:</h3>
+            <div class="content has-text-justified">
+                <p>
+                  <!-- Our contribution is as follows:
+                    <ul>
+                        <li>AAAAAAA</li>
+                        <li>AAAAAAA.</li>
+                         Put image of the figure1
+
+                        
+                    </ul>
+                     -->
+                        <table style="width: 100%;">
+                          <tr>
+                              <!-- First subfigure -->
+                              <td style="width: 39%; vertical-align: middle; text-align: center;">
+                                  <img src="static/images/reg_temporal_alignment.drawio-1.png" style="width: 100%;">
+                                  <p style="text-align: justify;">
+                                      <strong>Regular Temporal Alignment:</strong> A pair of videos from the same action class is given. The goal is to align them, i.e., match their key-event frames.
+                                  </p>
+                              </td>
+                              <!-- Second subfigure -->
+                              <td style="width: 58%; vertical-align: middle; text-align: center;">
+                                  <img src="static/images/avr_teaserV2.drawio-1.png" style="width: 100%;">
+                                  <p style="text-align: justify;">
+                                      <strong>Proposed Alignable Video Retrieval (AVR):</strong> Given a query video, the goal is to find the best alignable video from candidate videos of the video search results.
+                                  </p>
+                              </td>
+                          </tr>
+                      </table>
+                      <p style="text-align: justify;">
+                          <strong>Alignable Video Retrieval.</strong> While some actions, like "baseball swing" (left), permit temporal alignment in virtually all cases due to their fixed sequence of action phases, general videos from other action classes, like "cutting pineapple" (right), exhibit much more variability. Knowledge of the action category alone is insufficient to identify alignable pairs for these cases, and a deeper temporal understanding of the videos is required to identify alignable videos. We propose DRAQ, an alignability score that can reliably identify the alignable video pair (red) among the set of candidates.
+                      </p>
+                      
+                      
+
+                    
+                </p>
+            </div>
+            
+
+          
+      </div>
+    </div>
+
+  </div>
+</section>
 
 
 
@@ -146,7 +185,94 @@
         </div>
       </div>
     </div>
+
+    <section class="section" id="Method">
+      <div class="container is-max-desktop content">
+        <h2 class="title">Method</h2>
+        <div style="width: 100%; text-align: center;">
+          <img src="static/images/system_figure_avr.drawio-1.png" style="width: 100%;">
+          <p style="text-align: justify; margin-top: 20px;">
+              <strong>Model Overview.</strong> We introduce a model for Aligned Video Retrieval (AVR): Given an input query video clip, our model aims to find and temporally align the best matching video among a large collection of videos. Our approach has three stages: 1) candidate retrieval from a large-scale database, 2) re-ranking of the top candidates to identify the most alignable clip using our procedure DRAQ, and 3) alignment of query and top match using DTW on our contextualized frame-level features.
+          </p>
+      </div>
+      </div>
+    </section>
+
+<section class="section" id="Quantitative">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Cyclic-consistency based AVR protocols</h2>
+    <div class="container is-max-desktop content">
+      
+      <div style="width: 100%; text-align: center;">
+        <img src="static/images/cycle_eval-1.png" style="width: 60%;">
+        <p style="text-align: justify; margin-top: 20px;">
+            <strong>AVR evaluation via Cycle-Consistency.</strong> We illustrate the use of consistency errors to measure aligned video retrieval performance. A query video (bottom left), along with phase labels (colored regions) and frame indices (below the video), is warped to the top retrieval video (top). 
+            The aligned labels and frame indices are then warped back to the query again to complete the cycle. We then report the Frame Position Error (FPE) and the Cycle Phase Error (CPE) when the query contains phase information. 
+        </p>
+    </div>
+    </div> 
     
+    
+    <br>
+  </div>
+</section>
+    
+
+<section class="section" id="Qualitative">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Qualitative Results</h2>
+    Top = Query video, Bottom: Retrieved Alignable video
+
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <!-- Dynamic carousel items will be added here -->
+      </div>
+    </div>
+  
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const carouselContainer = document.getElementById('results-carousel');
+        const totalVideos = 20; // Total number of videos
+  
+        // Dynamically create video elements
+        for (let i = 1; i <= totalVideos; i++) {
+          const itemDiv = document.createElement('div');
+          itemDiv.className = 'item';
+          itemDiv.innerHTML = `
+            <video poster="" controls muted loop playsinline height="100%">
+              <source src="./static/videos/${i}.mp4" type="video/mp4">
+            </video>
+          `;
+          carouselContainer.appendChild(itemDiv);
+        }
+  
+        let currentIndex = 0;
+        const items = document.querySelectorAll('.item');
+  
+        function showVideo(index) {
+          items.forEach(item => item.classList.remove('active'));
+          items[index].classList.add('active');
+          items[index].querySelector('video').play();
+        }
+  
+        function nextVideo() {
+          currentIndex = (currentIndex + 1) % items.length;
+          showVideo(currentIndex);
+        }
+  
+        items.forEach((item, index) => {
+          item.querySelector('video').addEventListener('ended', nextVideo);
+        });
+  
+        // Initial display of the first video
+        showVideo(0);
+      });
+    </script>
+    
+  </div>
+</section>
+
+
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
